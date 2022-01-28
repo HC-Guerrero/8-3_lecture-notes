@@ -23,6 +23,10 @@ const lotteryNumbers = [81, 62, 53];
 const nextLottoNums = [11, 22, 35];
 const allNumbers = lotteryNumbers.concat(nextLottoNums);
 
+console.log(lotteryNumbers);
+console.log(nextLottoNums);
+console.log(allNumbers);
+console.log(lotteryNumbers === nextLottoNums)
 // // COMMENT ME IN WHEN YOU WANT TO RUN THIS CODE
 // console.log("2a. allNumbers:", allNumbers);
 // console.log("2b. lotteryNumbers:", lotteryNumbers);
