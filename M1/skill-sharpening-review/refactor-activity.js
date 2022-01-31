@@ -86,4 +86,6 @@ function getPercentageGrade(assignment) {
   }
 }
 
-function getOtherGrade(assignment) {}
+function getOtherGrade(assignment) {
+  
+}
