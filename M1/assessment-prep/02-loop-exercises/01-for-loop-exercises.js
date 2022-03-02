@@ -7,9 +7,25 @@
  * Example output:
  * 276 + 351 = 627
  */
-
+function findSum() {
 let arr_1 = [3, 5, 22, 5, 7, 2, 45, 75, 89, 21, 2]; // --> 276
 let arr_2 = [9, 2, 42, 55, 71, 22, 4, 5, 90, 25, 26]; // --> 351
+sum1 = 0;
+sum2 = 0;
+let finalsum = 0;
+for (i =0; i < arr_1.lengt; i++) {
+    for(j =0; j < arr_2.length; j++) {
+    //sum1 += arr_1[i];
+    sum2 += arr_2[j];
+    }
+    sum1 += arr_1[i];
+    
+}
+finalsum = sum1 + sum2;
+    return finalsum;
+}
+console.log(findSum());
+
 
 /**
  * EXERCISE 2
@@ -32,8 +48,19 @@ let arr_2 = [9, 2, 42, 55, 71, 22, 4, 5, 90, 25, 26]; // --> 351
  * 20
  * 22
  */
+function printEven() {
+let arrEven = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
+let arrEven2 = [];
 let n1 = 22;
+for( i = 2; i < arrEven.length; i+2); {
+    if (arrEven[i] %2 == 0) {
+        arrEven2.push(arrEven[i])
+    }
 
+}
+return arrEven2;
+}
+console.log(printEven(arrEven));
 /**
  * EXERCISE 3
  *
@@ -52,7 +79,11 @@ let n1 = 22;
  * 43
  *
  */
-let arr = [43, 'what', 9, true, 'cannot', false, 'be', 3, true];
+
+
+let arrReverse = [43, 'what', 9, true, 'cannot', false, 'be', 3, true];
+let arrReverse2 = [];
+
 
 /**
  * EXERCISE 4
