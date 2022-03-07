@@ -1,3 +1,53 @@
+let soccerTeams = [
+  'Manchester United',
+  'Real Madrid',
+  'Boca Juniors',
+  'NYC FC',
+];
+let canProduceSideEffects = [];
+console.log(
+soccerTeams.map(function (team) {
+  canProduceSideEffects.push(`yes`); ///DON'T DO THIS
+return {
+  name: team,
+  fanMessage: printTeamSupport(team), ///Rely on the return value to transform arrays
+      };
+  }),
+);
+
+function printTeamSupport(team) {
+  return `I am a super fan of ${team}: this is the named function`;
+}
+
+// with vanilla js we can run a loop, calling the printTeamSupport(element)
+
+// With Array.forEach(fn) we can do this
+// returns undefined even though printTeamSupport has a return value
+// because forEach explicitly returns undefined
+console.log(soccerTeams.forEach(printTeamSupport));
+
+soccerTeams.forEach(function (team) {
+  console.log(`I am a super fan of ${team}: this is the anonymous function`);
+});
+
+// create a new array with each team having it's own object
+let soccerTeamsV2 = [];
+
+soccerTeams.forEach(function (team, index) {
+  // let teamObj = {
+  //   name: team,
+  //   fanMessage: printTeamSupport(team);
+  // }
+  // soccerTeamsV2.push(teamObj);
+  soccerTeamsV2[index] = {};
+  soccerTeamsV2[index].name = team;
+  soccerTeamsV2[index].fanMessage = printTeamSupport(team);
+});
+
+console.log(soccerTeamsV2);
+
+
+
 // do not edit the comics object
 const comics = [
   { title: 'Calvin & Hobbes', author: 'Bill Watterson', kind: 'print' },
