@@ -1,9 +1,23 @@
+<<<<<<< HEAD
+=======
+/**
+ * Array.map(fn) <-- higher order since it takes a fn parameter
+ *
+ * Side Effects: map CAN produce them, but this is bad practice
+ *
+ * Return Value: DOES return a value
+ *
+ * We want to transform an array
+ */
+
+>>>>>>> 59ade987a762f83c4cdfbe9e822309b22889acc1
 let soccerTeams = [
   'Manchester United',
   'Real Madrid',
   'Boca Juniors',
   'NYC FC',
 ];
+<<<<<<< HEAD
 let canProduceSideEffects = [];
 console.log(
 soccerTeams.map(function (team) {
@@ -14,11 +28,14 @@ return {
       };
   }),
 );
+=======
+>>>>>>> 59ade987a762f83c4cdfbe9e822309b22889acc1
 
 function printTeamSupport(team) {
   return `I am a super fan of ${team}: this is the named function`;
 }
 
+<<<<<<< HEAD
 // with vanilla js we can run a loop, calling the printTeamSupport(element)
 
 // With Array.forEach(fn) we can do this
@@ -29,6 +46,20 @@ console.log(soccerTeams.forEach(printTeamSupport));
 soccerTeams.forEach(function (team) {
   console.log(`I am a super fan of ${team}: this is the anonymous function`);
 });
+=======
+let canProduceSideEffects = [];
+
+console.log(
+  soccerTeams.map(function (team) {
+    // canProduceSideEffects.push('yes'); // DO NOT DO THIS
+    return { name: team, fanMessage: printTeamSupport(team) }; // Rely on the return value to transform arrays
+  }),
+);
+
+// console.log(teamObjs);
+
+// console.log(canProduceSideEffects);
+>>>>>>> 59ade987a762f83c4cdfbe9e822309b22889acc1
 
 // create a new array with each team having it's own object
 let soccerTeamsV2 = [];
@@ -44,9 +75,13 @@ soccerTeams.forEach(function (team, index) {
   soccerTeamsV2[index].fanMessage = printTeamSupport(team);
 });
 
+<<<<<<< HEAD
 console.log(soccerTeamsV2);
 
 
+=======
+// console.log(soccerTeamsV2);
+>>>>>>> 59ade987a762f83c4cdfbe9e822309b22889acc1
 
 // do not edit the comics object
 const comics = [

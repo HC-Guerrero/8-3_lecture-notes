@@ -28,7 +28,7 @@ function printTeamSupport(team) {
 // With Array.forEach(fn) we can do this
 // returns undefined even though printTeamSupport has a return value
 // because forEach explicitly returns undefined
-console.log(soccerTeams.forEach(printTeamSupport));
+// console.log(soccerTeams.forEach(printTeamSupport));
 
 soccerTeams.forEach(function (team) {
   console.log(`I am a super fan of ${team}: this is the anonymous function`);
@@ -48,12 +48,13 @@ soccerTeams.forEach(function (team, index) {
   soccerTeamsV2[index].fanMessage = printTeamSupport(team);
 });
 
-console.log(soccerTeamsV2);
+// console.log(soccerTeamsV2);
 
 /**
  * 1
  *
  * The .forEach() method's callback function has up to three parameters. What are these parameters?
+<<<<<<< HEAD
  * Array.forEach(fn) // <- forEach is a method (property) of the Array object/ class
  * 
  * Higher Order because their is a required function parameter
@@ -65,6 +66,9 @@ console.log(soccerTeamsV2);
  * -it returns undefined
  * 
  * with Array.forEach, we create a new array or object ONLY ---- because there is no return value
+=======
+ *
+>>>>>>> 59ade987a762f83c4cdfbe9e822309b22889acc1
  */
   let soccerTeams = [
     `Manchester United`,
@@ -102,21 +106,21 @@ console.log(soccerTeamsV2);
  */
 
 // do not edit the comics object
-// const comics = [
-//   { title: 'Calvin & Hobbes', author: 'Bill Watterson', kind: 'print' },
-//   { title: 'Zen Pencils', author: 'Gavin Aung Than', kind: 'web' },
-//   { title: 'Nancy', author: 'Olivia James', kind: 'print' },
-//   { title: 'False Knees', author: 'Joshua Barkman', kind: 'web' },
-// ];
+const comics = [
+  { title: 'Calvin & Hobbes', author: 'Bill Watterson', kind: 'print' },
+  { title: 'Zen Pencils', author: 'Gavin Aung Than', kind: 'web' },
+  { title: 'Nancy', author: 'Olivia James', kind: 'print' },
+  { title: 'False Knees', author: 'Joshua Barkman', kind: 'web' },
+];
 
-// function printAllComics(comics) {
-//   // Write your code here.
-//   for (let comic of comics) {
-//     console.log(`${comic.title} by ${comic.author}`);
-//   }
-// }
+function printAllComics(comics) {
+  // Write your code here.
+  for (let comic of comics) {
+    console.log(`${comic.title} by ${comic.author}`);
+  }
+}
 
-// printAllComics(comics);
+printAllComics(comics);
 
 /**
  * 3
