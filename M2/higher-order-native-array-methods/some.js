@@ -37,7 +37,6 @@ function isWebComic(comic) {
   return comic.kind === 'web';
 }
 
-<<<<<<< HEAD
 const result = comics.some(isWebComic); //callback is called for every element that is processed.
 console.log(`comic:` +result); //> true
 
@@ -72,32 +71,3 @@ Method execution stops after the first true evaluation is true;
 
 
 */
-=======
-// higher order function similar to the logic of the native array method Array.some()
-const some = (array, callback) => {
-  for (let el of array) {
-    let res = callback(el);
-    if (res === true) {
-      return true;
-    }
-  }
-  return false;
-};
-
-const result = comics.some(isWebComic); // callback is called for every element that is processed
-console.log(result); //> true
-console.log(some(comics, isWebComic));
-
-/**
- * 3
- *
- * How are the find() and some() methods:
- *
- * SIMILAR
- * method execution stops after the first true evaluation occurs
- *
- * DIFFERENT
- * find() returns an element
- * some() returns a boolean
- */
->>>>>>> f08ca227492aed2cf3db74dec080e82ba9427eed

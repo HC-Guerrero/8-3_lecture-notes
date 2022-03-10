@@ -54,7 +54,6 @@ soccerTeams.forEach(function (team, index) {
  * 1
  *
  * The .forEach() method's callback function has up to three parameters. What are these parameters?
-<<<<<<< HEAD
  * Array.forEach(fn) // <- forEach is a method (property) of the Array object/ class
  * 
  * Higher Order because their is a required function parameter
@@ -66,11 +65,8 @@ soccerTeams.forEach(function (team, index) {
  * -it returns undefined
  * 
  * with Array.forEach, we create a new array or object ONLY ---- because there is no return value
-=======
- *
->>>>>>> 59ade987a762f83c4cdfbe9e822309b22889acc1
  */
-  let soccerTeams = [
+ /* let soccerTeams = [
     `Manchester United`,
     `Real Madrid`,
     `Boca Juniors`,
@@ -94,10 +90,10 @@ console.log(`I am a super fan of ${team} : This is the anon function`)
   soccerTeamsV2[index].name = team;
 soccerTeamsV2[index].fanMessage = printTeamSupport(team)
 });
-console.log(soccerTeamsV2);
+console.log(soccerTeamsV2); 
 
   soccerTeams.forEach(printTeamSupport()); //Not a fn call, just passing in a named fn
-//uses side effects to achieve logical goal
+//uses side effects to achieve logical goal */
 
 /**
  * 2
