@@ -167,10 +167,10 @@ function totalVotes(arr) {
 const voters = [
   { name: 'Bob', age: 30, voted: true },
   { name: 'Jake', age: 32, voted: true },
-  { name: 'Kate', age: 25, voted: false },
-  { name: 'Sam', age: 20, voted: false },
+  { name: 'Kate', age: 25, voted: false },{ name: 'Sam', age: 20, voted: false },
+  
   { name: 'Phil', age: 21, voted: true },
-  { name: 'Ed', age: 55, voted: true },
+{ name: 'Ed', age: 55, voted: true },
   { name: 'Tami', age: 54, voted: true },
   { name: 'Mary', age: 31, voted: false },
   { name: 'Becky', age: 43, voted: false },
@@ -229,7 +229,6 @@ const arrays = [['1', '2', '3'], [true], [4, 5, 6]];
  */
 
 function voterResults(arr) {
-<<<<<<< HEAD
   //default return value
   /*{
     numYoungVotes: 0, // call reduce + conditional voted true and age 18 - 25
@@ -239,51 +238,6 @@ function voterResults(arr) {
     numOldVotesPeople: 0 // call reduce + conditionals voted true and age 36+
     numOldsPeople: 0 //call reduce + conditionals voted true and age 36+ 
   } */
-=======
-  // default return value
-  // {
-  //   numYoungVotes: 0, // call reduce + conditional voted true and && age 18-25
-  //   numYoungPeople: 0, // call reduce + conditional && age 18-25
-  //   numMidVotesPeople: 0, // call reduce + conditional voted true && age 26-35
-  //   numMidsPeople: 0, // call reduce + conditional age 18-25
-  //   numOldVotesPeople: 0, // call reduce + conditional voted true && age 36+
-  //   numOldsPeople: 0, // call reduce + conditional age 36+
-  // }
-  let numOldPeople = 0;
-  const res = {
-    numYoungVotes: arr.reduce((acc, el) => {
-      // call reduce + conditional voted true and && age 18-25
-      if (el.voted === true && el.age <= 25 && el.age >= 18) {
-        return acc + 1;
-      }
-      return acc + 0; // explicitly adding 0 is SOMETIMES not necessary, but visually remember this is happening in the background
-    }, 0),
-    numYoungPeople: arr.reduce((acc, el) => {
-      if (el.age <= 25 && el.age >= 18) {
-        return acc + 1;
-      }
-      return acc + 0;
-    }, 0), // expression that evaluate to a certain return value
-    numMidVotes: arr.reduce((acc, el) => {
-      // call reduce + conditional voted true && age 26-35
-      if (el.voted && el.age >= 26 && el.age <= 35) {
-        return acc + 1;
-      }
-      return acc + 0;
-    }, 0),
-    numMidPeople: arr.reduce((acc, el) => {
-      // call reduce + conditional age 26-35
-      if (el.age >= 26 && el.age <= 35) {
-        return acc + 1;
-      }
-      return acc + 0;
-    }, 0),
-    numOldVotes: 0, // call reduce + conditional voted true && age 36+
-    numOldPeople: 0, // call reduce + conditional age 36+
-  };
-
-  return res;
->>>>>>> a26a1803af10058998c7cf8407e574bc2fc2331e
   // your code here
   const res = {
     numYoungVotes: 0,
@@ -340,11 +294,7 @@ res.numOldPeople = arr.reduce((acc, el) => {
   return res;
 }
 
-<<<<<<< HEAD
  console.log(voterResults(voters)); // Returned value shown below:
-=======
-console.log(voterResults(voters)); // Returned value shown below:
->>>>>>> a26a1803af10058998c7cf8407e574bc2fc2331e
 /*
 { 
   numYoungVotes: 1,
