@@ -66,7 +66,8 @@ return accumulator + currentValue; // In the background the accumulator value is
  */
 
 let arr1 = [1, 2, 3, 4];
-let sum1 = arr1.reduce((acc, el) => { // acc = Accumulator, el = current Element
+let sum1 = arr1.reduce((acc, el) => {
+  // acc = Accumulator, el = current Element
   return acc + el;
 });
 
@@ -138,7 +139,7 @@ let sum3 = arr2.reduce(adder, 5);
  */
 
 function stringConcat(arr1) {
-  const stringConv = arr1.reduce( (acc, el) => { 
+  const stringConv = arr1.reduce((acc, el) => {
     return acc + el.toString();
   });
 
@@ -154,23 +155,24 @@ function stringConcat(arr1) {
  *
  * Note: You don't necessarily have to use reduce for this, so try to think of multiple ways you could solve this.
  */
-let arr = [1, 2, 3, 4, 5]
+let arr = [1, 2, 3, 4, 5];
 
 function totalVotes(arr) {
   const totalVote = arr.reduce((acc, el) => {
-    return totalVote = acc + el;
+    return (totalVote = acc + el);
   });
-  console.log(totalVotes(arr))
+  console.log(totalVotes(arr));
   // your code here
 }
 
 const voters = [
   { name: 'Bob', age: 30, voted: true },
   { name: 'Jake', age: 32, voted: true },
-  { name: 'Kate', age: 25, voted: false },{ name: 'Sam', age: 20, voted: false },
-  
+  { name: 'Kate', age: 25, voted: false },
+  { name: 'Sam', age: 20, voted: false },
+
   { name: 'Phil', age: 21, voted: true },
-{ name: 'Ed', age: 55, voted: true },
+  { name: 'Ed', age: 55, voted: true },
   { name: 'Tami', age: 54, voted: true },
   { name: 'Mary', age: 31, voted: false },
   { name: 'Becky', age: 43, voted: false },
@@ -245,46 +247,46 @@ function voterResults(arr) {
     numMidVotes: 0,
     numMidPeople: 0,
     numOldVotes: 0,
-    numOldPeople: 0, 
+    numOldPeople: 0,
   };
-  res.numYoungVotes = arr.reduce((acc, el)  => {
-    if (el.voted === true && el.age < 25 && el.age > 18){
-      console.log("called")
-        return acc + 1;
-    }
-    return acc + 0;
-  }, 0),
-  res.numYoungPeople = arr.reduce((acc, el) =>{
-    if(el.age <= 25 && el.age >= 18) {
+  (res.numYoungVotes = arr.reduce((acc, el) => {
+    if (el.voted === true && el.age < 25 && el.age > 18) {
+      console.log('called');
       return acc + 1;
     }
     return acc + 0;
-  }, 0),
-res.numMidVotes = arr.reduce((acc,el) => {
-  if(el.voted /*<-booleancheck*/ && el.age >= 26 && el.age <= 35 ) {
-    return acc + 1;
-  }
-  return acc + 0;
-}, 0),
-res.numMidPeople = arr.reduce((acc,el) => {
-  if(el.age <= 35 && el.age >= 26) {
-    return acc + 1;
-  }
-  return acc + 0;
-}, 0),
-res.numOldVotes = arr.reduce((acc, el) => {
-  if(el.voted && el.age > 36) {
-    return acc + 1;
-  }
-  return acc + 0;
-}, 0),
-res.numOldPeople = arr.reduce((acc, el) => {
-  if(el.age > 36) {
-    return acc + 1;
-  }
-  return acc + 0;
-}, 0 ),
-  res.numYoungVotes;
+  }, 0)),
+    (res.numYoungPeople = arr.reduce((acc, el) => {
+      if (el.age <= 25 && el.age >= 18) {
+        return acc + 1;
+      }
+      return acc + 0;
+    }, 0)),
+    (res.numMidVotes = arr.reduce((acc, el) => {
+      if (el.voted /*<-booleancheck*/ && el.age >= 26 && el.age <= 35) {
+        return acc + 1;
+      }
+      return acc + 0;
+    }, 0)),
+    (res.numMidPeople = arr.reduce((acc, el) => {
+      if (el.age <= 35 && el.age >= 26) {
+        return acc + 1;
+      }
+      return acc + 0;
+    }, 0)),
+    (res.numOldVotes = arr.reduce((acc, el) => {
+      if (el.voted && el.age > 36) {
+        return acc + 1;
+      }
+      return acc + 0;
+    }, 0)),
+    (res.numOldPeople = arr.reduce((acc, el) => {
+      if (el.age > 36) {
+        return acc + 1;
+      }
+      return acc + 0;
+    }, 0)),
+    res.numYoungVotes;
   res.numYoungPeople;
   res.numMidPeople;
   res.numMidVotes;
@@ -294,7 +296,7 @@ res.numOldPeople = arr.reduce((acc, el) => {
   return res;
 }
 
- console.log(voterResults(voters)); // Returned value shown below:
+console.log(voterResults(voters)); // Returned value shown below:
 /*
 { 
   numYoungVotes: 1,
