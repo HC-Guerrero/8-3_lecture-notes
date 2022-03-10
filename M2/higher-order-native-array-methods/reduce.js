@@ -5,6 +5,7 @@
  * Take an array, and using a callback function(anonymous or named), will apply an accumulation and return a single value, if there are no elements in the array
  * the default value will be the second(optional) argument passed to reduce.
  *
+ * Side Effects: NOT recommended
  *
  * Side Effects: NOT recommended
  *
@@ -70,6 +71,30 @@ let sum1 = arr1.reduce((acc, el) => { // acc = Accumulator, el = current Element
 
 console.log(sum1); // => 10
 
+// validate our element values are correct
+let numbers3 = ['string'];
+
+let sumNumbers = numbers3.reduce((acc, el) => {
+  if (typeof el !== 'number') {
+    return 0;
+  }
+  return acc + el;
+}, 0);
+
+console.log(sumNumbers);
+
+// handling an empty array
+let numbers4 = [];
+
+let sumNumbers4 = numbers4.reduce((acc, el) => {
+  if (typeof el !== 'number') {
+    return 0;
+  }
+  return acc + el;
+}, 0);
+
+console.log(sumNumbers4);
+
 /**
  * 2
  *
@@ -89,7 +114,7 @@ let sum2 = arr2.reduce((acc, el) => {
   return acc + el;
 }, 5);
 
-console.log(sum2); // => 15
+// console.log(sum2); // => 15
 
 /**
  * 3
@@ -103,7 +128,7 @@ const adder = (num1, num2) => {
 
 let sum3 = arr2.reduce(adder, 5);
 
-console.log(sum3); // => 15
+// console.log(sum3); // => 15
 
 /**
  * 4
@@ -116,7 +141,7 @@ function stringConcat(arr) {
   // your code here
 }
 
-console.log(stringConcat([1, 2, 3])); // "123"
+// console.log(stringConcat([1, 2, 3])); // "123"
 /**
  * 5
  *
@@ -143,7 +168,7 @@ const voters = [
   { name: 'Jeff', age: 30, voted: true },
   { name: 'Zack', age: 19, voted: false },
 ];
-console.log(totalVotes(voters)); // 7
+// console.log(totalVotes(voters)); // 7
 
 /**
  * 6
@@ -163,7 +188,7 @@ const wishlist = [
   { title: 'A second Tesla Model S', price: 90000 },
 ];
 
-console.log(shoppingSpree(wishlist)); // 227005
+// console.log(shoppingSpree(wishlist)); // 227005
 /**
  * 7
  *
@@ -178,7 +203,7 @@ function flatten(arr) {
 
 const arrays = [['1', '2', '3'], [true], [4, 5, 6]];
 
-console.log(flatten(arrays)); // ["1", "2", "3", true, 4, 5, 6];
+// console.log(flatten(arrays)); // ["1", "2", "3", true, 4, 5, 6];
 
 /**
  * 8
@@ -192,7 +217,7 @@ function voterResults(arr) {
   // your code here
 }
 
-console.log(voterResults(voters)); // Returned value shown below:
+// console.log(voterResults(voters)); // Returned value shown below:
 /*
 { numYoungVotes: 1,
   numYoungPeople: 4,
