@@ -27,10 +27,10 @@
 - Each completed function (passes all the tests) will be worth 1 point.
 - 7 functions pass all tests === 7 points
 
-> A minimum of 5 points must be attained in order to pass this assessment.
-> You may receive partial credit (0.5 points) for code that is close to passing the tests, but does not pass all the tests.
+  > A minimum of 5 points must be attained in order to pass this assessment.
+  > You may receive partial credit (0.5 points) for code that is close to passing the tests, but does not pass all the tests.
 
-- 4 tests, and your function passes 3 === 0.5 points
+- 4 tests, and your function passes 3 === 0.5 points.
 
 > If your code includes comments mapping out your intentions (in pseudocode), this will help show your logical strategy, and indicate whether you are on the right track. For examaple:
 
