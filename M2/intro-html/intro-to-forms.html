@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro to Forms</title>
+  </head>
+  <body>
+<h1>Independent Study Application</h1>
+<section style = "background-color : blue; border-radius: 50px; ">
+<p>Required Fields*</p>
+<form>
+    <h3>Program Location</h3>
+    <label>
+    US
+    <input id ="America" type = "radio" name ="program-location"/>
+    </label>
+    <label>
+    Abroad
+    <input id ="Abroad" type = "radio" name = "program-location"/>
+    </label>
+    <h3>Personal Information</h3>
+    <!--- input is a self-closing tage-->
+    <label>First *
+    <input type = "text" placeholder = "First Name" required/>
+</label> <!---Nested Label-->
+<label for = "last-name-input">Last *</label> <!---"Standard" Way-->
+    <input id = "last-name-input" type = "text" placeholder = "Last Name" required/>
+    <label>Email *
+        <input type = "email" placeholder = "Email" required/>
+        </label>
+        <h3>Program Information </h3>
+        <select id = "type-program-input" name = "program" required>
+            <!--Drop Down Menu-->
+            <option>Select a Program Type</option>
+            <option value = "bachelor-of-arts">Bachelor of Arts</option>
+            <option value = "bachelor-of-science">Bachelor of Science</option>
+            <option value = "semester-abroad">Semester Abroad</option>
+            <option></option>
+        </select>
+        <label>
+            Length*
+            <input 
+            id = "length-input" 
+            type = "text"
+            placeholder = "length in months"
+            required/>
+        </label>
+        <label>
+            Start Date *
+            <input 
+            id = "start-date-input"
+            type = "date"
+            placeholder = "mm/dd/yy"
+            required
+            />
+        </label>
+<button type = "submit">Submit</button>
+
+</form>
+  </body>
+</html>
