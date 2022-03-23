@@ -6,7 +6,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   justify-content: center;
   grid-gap: 5px;
   grid-auto-rows: minmax(120px, auto);
@@ -19,10 +19,13 @@ body {
   font-size: 14px;
   border-radius: 5px;
   border: 2px solid white;
+<<<<<<< HEAD
 }
 
 .a {
   background-color: red;
   grid-row: 1 / span 4;
   grid-column: 1 / span 4;
+=======
+>>>>>>> e0e02b8db69e3fbd9820bc64dbac2ddb80b09403
 }
